@@ -10,6 +10,7 @@
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
   <link rel="stylesheet" href="CSS/index.css" />
   <link rel="stylesheet" href="CSS/card-parent.css">
+  <link rel="stylesheet" href="CSS/navbar.css">
 </head>
 
 <body>
@@ -17,69 +18,39 @@
     <!-- NavBar Start -->
     <nav class="navbar navbar-expand-lg bg-body-secondary">
       <div class="container-fluid d-flex justify-content-around">
+        <!-- LOGO START -->
         <a class="navbar-brand" href="#">MBA Colleges</a>
+        <!-- LOGO END -->
+        <!-- CONTACT DIVS START -->
         <div class="d-flex justify-content-end">
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+          <!-- RESPONSIVE SIDEBAR FOR MOBILE START -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
+            aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="offcanvas offcanvas-end pe-2" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg"
+            aria-labelledby="navbarOffcanvasLgLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="navbar-nav offcanvas-body">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">Study Abroad</a>
-              <a class="nav-link" href="#">Free Class</a>
-              <!-- <a class="nav-link dropdown-center">More</a> -->
-              <div class="nav-link dropdown-center">
-                <div class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  More
-                </div>
-                <div class="dropdown-menu">
-                  <a href="#" class="dropdown-item">Careers</a>
-                  <a href="#" class="dropdown-item">Blogs</a>
-                  <a href="#" class="dropdown-item">Resources</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mx-2">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Sign
-              Up</button>
-            <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel">
-              <div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="registerModalLabel">Sign Up or Login</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form id="registerWithPhone">
-                      <div class="mb-3">
-                        <label for="signInWithMobile" class="col-form-label"></label>
-                        <div class="input-group">
-                          <span class="input-group-text" id="basic-addon1">🇮🇳 (+91) </span>
-                          <input type="tel" class="form-control" id="signInWithMobile" aria-describedby="mobileNumberHelp"
-                            placeholder="Mobile Number" aria-placeholder="enter-mobile-number">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" onclick="validatePhone()">Continue <svg width="17" height="14"
-                        viewBox="0 0 17 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M16.0867 6.9999C16.0867 7.14542 16.0244 7.2844 15.9208 7.38904L10.3176 12.8387C10.0963 13.054 9.73799 13.0535 9.51724 12.8387C9.29592 12.624 9.29592 12.2752 9.51724 12.0604L14.1548 7.55037L1.65271 7.55037C1.34025 7.55037 1.08667 7.30402 1.08667 6.9999C1.08667 6.69577 1.34025 6.44942 1.65271 6.44942L14.1542 6.44942L9.51724 1.93935C9.29592 1.72461 9.29648 1.37579 9.51724 1.16105C9.73856 0.946315 10.0969 0.946315 10.3176 1.16105L15.9208 6.61075C16.0267 6.71376 16.085 6.85547 16.0867 6.9999Z"
-                          fill="#B0BEC5" stroke="#B0BEC5" stroke-width="0.5" stroke-linecap="round"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
+            <div class="container">
+              <div class="navbar-nav d-flex justify-content-around contact-group offcanvas-body row">
+                <!-- CONTACT - EMAIL START -->
+                <p class="col input-group">
+                  <a href="mailto:help@email.com" class="form-control fs-6 fw-lighter font-monospace">&#9993;help</a>
+                </p>
+                <!-- CONTACT - EMAIL END -->
+                <!-- CONTACT - PHONE START -->
+                <p class="col input-group">
+                  <a href="tel:7654321980" class="form-control fs-6 fw-lighter font-monospace">&#9990;help</a>
+                </p>
+                <!-- CONTACT - PHONE END -->
               </div>
             </div>
           </div>
         </div>
+        <!-- CONTACT DIVS END -->
       </div>
     </nav>
     <!-- NavBar End -->
@@ -96,7 +67,8 @@
                   </div>
                   <div class="card-text">
                     <p>
-                      Fast-forward your career with a coveted MBA degree. Get access to programs from recognised universities across the world.
+                      Fast-forward your career with a coveted MBA degree. Get access to programs from recognised
+                      universities across the world.
                     </p>
                     <ul>
                       <li>
@@ -123,8 +95,8 @@
                 </div>
                 <div class="mb-3">
                   <label for="registrationInputPassword" class="form-label"></label>
-                  <input type="password" class="form-control" id="registrationInputPassword" placeholder="Enter Password"
-                    aria-placeholder="enter-password">
+                  <input type="password" class="form-control" id="registrationInputPassword"
+                    placeholder="Enter Password" aria-placeholder="enter-password">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>

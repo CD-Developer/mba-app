@@ -1,7 +1,10 @@
+a {
+  text-decoration: none;
+}
 .form-div {
   /* border: 2px solid red; */
   border-radius: 0.5rem;
-  background: linear-gradient(#dfe3e8, #dfe3e8 50%, #EBFB99 50%, #EBFB99);
+  background: linear-gradient(#dfe3e8, #dfe3e8 50%, #ebfb99 50%, #ebfb99);
   background-size: 100% 200%;
   transition: all 0.2s ease;
   font: 400;
@@ -41,7 +44,7 @@
   .form-div {
     /* border: 2px solid red; */
     border-radius: 0.5rem;
-    background: linear-gradient(white, white 50%, #EBFB99 50%, #EBFB99);
+    background: linear-gradient(white, white 50%, #ebfb99 50%, #ebfb99);
     background-size: 100% 200%;
     transition: all 0.2s ease;
     font: 400;
