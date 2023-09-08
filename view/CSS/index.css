@@ -8,7 +8,7 @@ a {
   background-size: 100% 200%;
   transition: all 0.2s ease;
   font: 400;
-  padding: 100px; /** TODO: MOBILE VIEW [DONE] **/
+  /* padding: 25px; * TODO: MOBILE VIEW [DONE] * */
 }
 
 .form-div:hover {
@@ -31,6 +31,14 @@ a {
   /* border: 2px solid teal; */
   background: #dfe3e8;
   padding: 10px;
+}
+
+.valid-phone {
+  border: 2px solid green;
+}
+
+.invalid-phone {
+  border: 2px solid red;
 }
 
 @media (max-width: 991px) {
