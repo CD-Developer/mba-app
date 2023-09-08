@@ -39,7 +39,7 @@ a {
   }
 
   .hero-div {
-    display: none;
+    padding: 25px;
   }
   .form-div {
     /* border: 2px solid red; */

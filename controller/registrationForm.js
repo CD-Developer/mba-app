@@ -10,10 +10,9 @@ function validatePhone() {
   console.log({ contactNo, isValid });
 }
 
-document.querySelector("#registrationForm")?.addEventListener("submit", (e) => {
-  e.preventDefault();
+function getUserDetails() {
   let email = document.querySelector("#registrationInputEmail").value;
   let password = document.querySelector("#registrationInputPassword").value;
-
+  
   console.log({ email, password });
-});
+}

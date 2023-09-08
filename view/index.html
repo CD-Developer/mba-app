@@ -82,6 +82,81 @@
                       </li>
                     </ul>
                   </div>
+                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                    Get Free Career Counselling
+                  </button>
+
+                  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel">
+                    <div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="registerModalLabel">Sign Up or Login</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          
+                          <form id="counsellingForm">
+                            <div class="mb-3">
+                              <label for="counsellingInputName" class="form-label"></label>
+                              <div class="input-group">
+                                <span class="input-group-text">&#128100;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <input type="text" class="form-control" id="counsellingInputName" name="counsellingInputName" aria-describedby="nameHelp"
+                                  placeholder="Name" aria-placeholder="enter-name">
+                              </div>
+                            </div>
+                            <div class="mb-3">
+                              <label for="counsellingInputEmail" class="form-label"></label>
+                              <div class="input-group">
+                                <span class="input-group-text">&#9993;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <input type="email" class="form-control" id="counsellingInputEmail" name="counsellingInputEmail" aria-describedby="emailHelp"
+                                  placeholder="Email" aria-placeholder="enter-email">
+                              </div>
+                            </div>
+                            <div class="mb-3">
+                              <label for="counsellingInputPhone" class="form-label"></label>
+                              <div class="input-group">
+                                <span class="input-group-text">(+91)</span>
+                                <input type="tel" class="form-control" id="counsellingInputPhone" name="counsellingInputPhone"
+                                  placeholder="Phone No" aria-placeholder="enter-phone">
+                              </div>
+                            </div>
+                            <div class="mb-3">
+                              <label for="counsellingInputCity" class="form-label"></label>
+                              <div class="input-group">
+                                <span class="input-group-text">&#127760;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <input type="search" class="form-control" id="counsellingInputCity" name="counsellingInputCity" list="cities"
+                                  placeholder="City" aria-placeholder="enter-city">
+                                  <datalist id="cities">
+                                    <option value="Delhi NCR"></option>
+                                    <option value="Pune"></option>
+                                    <option value="Mumbai"></option>
+                                    <option value="Hyderabad"></option>
+                                    <option value="Chennai"></option>
+                                    <option value="Bangalore"></option>
+                                    <option value="Kolkata"></option>
+                                    <option value="Shimla"></option>
+                                    <option value="Chandigarh"></option>
+                                    <option value="Lucknow"></option>
+                                  </datalist>
+                              </div>
+                            </div>
+                            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                          </form>
+                  
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary" onclick="validatePhone()">Continue <svg width="17" height="14"
+                              viewBox="0 0 17 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.0867 6.9999C16.0867 7.14542 16.0244 7.2844 15.9208 7.38904L10.3176 12.8387C10.0963 13.054 9.73799 13.0535 9.51724 12.8387C9.29592 12.624 9.29592 12.2752 9.51724 12.0604L14.1548 7.55037L1.65271 7.55037C1.34025 7.55037 1.08667 7.30402 1.08667 6.9999C1.08667 6.69577 1.34025 6.44942 1.65271 6.44942L14.1542 6.44942L9.51724 1.93935C9.29592 1.72461 9.29648 1.37579 9.51724 1.16105C9.73856 0.946315 10.0969 0.946315 10.3176 1.16105L15.9208 6.61075C16.0267 6.71376 16.085 6.85547 16.0867 6.9999Z"
+                                fill="#B0BEC5" stroke="#B0BEC5" stroke-width="0.5" stroke-linecap="round"></path>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
