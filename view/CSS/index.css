@@ -8,7 +8,11 @@ a {
   background-size: 100% 200%;
   transition: all 0.2s ease;
   font: 400;
-  /* padding: 25px; * TODO: MOBILE VIEW [DONE] * */
+  padding: 25px; /* TODO: MOBILE VIEW [DONE] */
+}
+
+.close-btn:hover {
+  background-color: red;
 }
 
 .form-div:hover {

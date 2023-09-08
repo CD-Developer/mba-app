@@ -82,22 +82,26 @@
                       </li>
                     </ul>
                   </div>
-                  <!-- BUTTON 1 : MODAL LAUNCHER : MODAL-1 START -->
-                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
-                    data-bs-target="#registerModal">
-                    Get Free Career Counselling
-                  </button>
-                  <!-- BUTTON 1 : MODAL LAUNCHER : MODAL-1 END -->
+                  <div class="d-flex">
+                    <!-- BUTTON 1 : MODAL LAUNCHER : MODAL-1 START -->
+                    <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal"
+                      data-bs-target="#registerModal">
+                      Get Free Career Counselling
+                    </button>
+                    <!-- BUTTON 1 : MODAL LAUNCHER : MODAL-1 END -->
+                    <!-- BUTTON 2 : FORM-2 HIGHLIGHTER START -->
+                    <a href="#formTwo" class="btn btn-outline-success ms-2" target="_parent"
+                      rel="noopener noreferrer">Contact Form</a>
+                    <!-- BUTTON 2 : FORM-2 HIGHLIGHTER END -->
+                  </div>
                   <!-- MODAL : MODAL-1 START -->
                   <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel">
                     <div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down">
                       <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="registerModalLabel">Sign Up or Login</h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
+                        <button type="button"
+                          class="btn-close d-flex flex-column-reverse align-self-end me-2 mt-2 close-btn"
+                          data-bs-dismiss="modal" aria-label="Close"></button>
                         <div class="modal-body">
-
                           <form id="counsellingForm">
                             <div class="mb-3">
                               <label for="counsellingInputName" class="form-label"></label>
@@ -167,7 +171,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 form-div">
+            <div class="col-lg-4 form-div" id="formTwo">
               <h3 class="text-center">MBA Coaching</h3>
               <form id="registrationForm">
                 <div class="mb-3">
@@ -180,24 +184,25 @@
                   <div class="col-sm mb-1">
                     <small>Preferred Budget</small>
                     <label for="minFees" class="form-label"></label>
-                    <input 
-                    type="number" name="minFees" id="minFees" class="form-control"
-                    aria-describedby="minFeeseHelp" placeholder="Min" aria-placeholder="enter-min-fees"
-                    >
+                    <div class="input-group">
+                      <span class="input-group-text">&#8377;</span>
+                      <input type="number" name="minFees" id="minFees" class="form-control"
+                        aria-describedby="minFeeseHelp" placeholder="Min" aria-placeholder="enter-min-fees">
+                    </div>
                   </div>
                   <div class="col-sm mb-1">
                     <label for="minFees" class="form-label"></label>
-                    <input 
-                    type="number" name="minFees" id="minFees" class="form-control"
-                    aria-describedby="minFeeseHelp" placeholder="Min" aria-placeholder="enter-min-fees"
-                    >
+                    <div class="input-group">
+                      <span class="input-group-text">&#8377;</span>
+                      <input type="number" name="minFees" id="minFees" class="form-control"
+                        aria-describedby="minFeeseHelp" placeholder="Max" aria-placeholder="enter-min-fees">
+                    </div>
                   </div>
                 </div>
                 <div class="mb-3">
                   <label for="registrationInputCity" class="form-label"></label>
-                  <input type="search" class="form-control" id="registrationInputCity"
-                  name="registrationInputCity" list="cities" placeholder="&#127760; City"
-                  aria-placeholder="enter-city">
+                  <input type="search" class="form-control" id="registrationInputCity" name="registrationInputCity"
+                    list="cities" placeholder="&#127760; City" aria-placeholder="enter-city">
                   <datalist id="cities">
                     <option value="Delhi NCR"></option>
                     <option value="Pune"></option>
@@ -213,14 +218,18 @@
                 </div>
                 <div class="mb-3">
                   <label for="registrationInputCourses" class="form-label">Specialization Field</label>
-                  <select class="form-control" name="registrationInputCourses" id="registrationInputCourses" multiple aria-multiline="true" aria-placeholder="enter-courses">
+                  <select class="form-control" name="registrationInputCourses" id="registrationInputCourses" multiple
+                    aria-multiline="true" aria-placeholder="enter-courses">
                     <option value="Finance - MBA">Finance - MBA</option>
                     <option value="IT - MBA">IT - MBA</option>
                     <option value="HR - PGDM">HR - PGDM</option>
                     <option value="Energy - MBA">Energy - MBA</option>
                   </select>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="mb-3 me-3 d-flex justify-content-end">
+                  <button type="submit" class="btn btn-primary">Submit -></button>
+                </div>
+
               </form>
             </div>
           </div>
