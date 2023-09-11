@@ -18,7 +18,7 @@ a {
 .form-div-focus {
   border: 3px #deaa0e solid;
   scale: 105%;
-  box-shadow: 5px 5px 5px #75ebf8;
+  box-shadow: 5px 5px 10px #75ebf8, -10px 0 #75ebf8;
 }
 
 .close-btn:hover {
