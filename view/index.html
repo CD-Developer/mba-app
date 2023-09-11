@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="CSS/index.css" />
   <link rel="stylesheet" href="CSS/card-parent.css">
   <link rel="stylesheet" href="CSS/navbar.css">
+  <link rel="stylesheet" href="CSS/search-comp.css">
 </head>
 
 <body>
@@ -237,33 +238,29 @@
         </div>
         <!-- Carousel as hero End -->
       </section>
-      <!-- Marquee parent div Start -->
-      <section id="marquee">
-        <div class="container-fluid card-parent">
-          <div class="row row-cols-1">
-            <div class="col col-padder">
-              <p class="text-start mb-0">UNIVERSITY PARTNERS</p>
-              <p class="text-start fs-2">Learn from <small class="text-success-emphasis">Top University Partners</small>
-              </p>
-              <div class="card card-style">
-                <div class="card-body">
-                  <marquee behavior="scroll" direction="left" scrollamount="3" class="d-flex justify-content-evenly">
-                    <img src="../public/imgs/img1.png" alt="Image 1" height="100"
-                      class="img-fluid img-thumbnail img-mar">
-                    <img src="../public/imgs/img2.png" alt="Image 2" height="100"
-                      class="img-fluid img-thumbnail img-mar">
-                    <img src="../public/imgs/img3.png" alt="Image 3" height="100"
-                      class="img-fluid img-thumbnail img-mar">
-                    <img src="../public/imgs/img4.png" alt="Image 4" height="100"
-                      class="img-fluid img-thumbnail img-mar">
-                  </marquee>
-                </div>
-              </div>
-            </div>
+      <!-- Search Element for Colleges Start -->
+      <section id="search-colleges">
+
+        <div class="col-padder">
+          <p class="text-start mb-0">UNIVERSITY PARTNERS</p>
+          <p class="text-start fs-2">Learn from <small class="text-success-emphasis">Top University Partners</small>
+          </p>
+          <div class="card-style d-flex justify-content-evenly">
+            <!-- SEARCH BAR & SEARCH BUTTON START -->
+            <label for="searchColleges"></label>
+            <input type="search" name="searchColleges" id="searchColleges" class="form-control search-box"
+              aria-describedby="searchColleges" aria-placeholder="Search Colleges">
+            <a href="#" target="_self" class="btn btn-outline-primary search-btn"><svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+              </svg></a>
+            <!-- SEARCH BAR & SEARCH BUTTON END -->
           </div>
         </div>
       </section>
-      <!-- Marquee parent div End -->
+      <!-- Search Element for Colleges End -->
     </div>
     <footer>
       <div class="container-fluid foot text-center fw-lighter">
