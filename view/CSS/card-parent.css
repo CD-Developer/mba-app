@@ -1,12 +1,7 @@
 .card-style {
   margin: 0 50px 0 50px;
   border-radius: 25px;
-}
-
-.img-mar {
-  margin: 0 50px 0 50px;
-  /* width: 60px; */
-  height: 60px;
+  min-height: 75px;
 }
 
 .col-padder {
@@ -20,5 +15,6 @@
   .card-style {
     margin: 0 10px 0 10px;
     border-radius: 25px;
+    min-height: 75px;
   }
 }

@@ -4,20 +4,27 @@ a {
 .form-div {
   /* border: 2px solid red; */
   border-radius: 0.5rem;
-  background: linear-gradient(#dfe3e8, #dfe3e8 50%, #ebfb99 50%, #ebfb99);
+  background: linear-gradient(#dfe3e8, #dfe3e8 50%, #fff2cb 50%, #feebb1);
   background-size: 100% 200%;
   transition: all 0.2s ease;
   font: 400;
   padding: 25px; /* TODO: MOBILE VIEW [DONE] */
 }
 
+.form-div:hover {
+  background-position: 100% 100%;
+}
+
+.form-div-focus {
+  border: 3px #deaa0e solid;
+  scale: 105%;
+  box-shadow: 5px 5px 5px #75ebf8;
+}
+
 .close-btn:hover {
   background-color: red;
 }
 
-.form-div:hover {
-  background-position: 100% 100%;
-}
 
 .hero-div {
   /* border: 2px solid green; */

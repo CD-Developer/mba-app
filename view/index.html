@@ -93,11 +93,11 @@
                     <!-- BUTTON 1 : MODAL LAUNCHER : MODAL-1 END -->
                     <!-- BUTTON 2 : FORM-2 HIGHLIGHTER START -->
                     <a href="#formTwo" class="btn btn-outline-success ms-2" target="_parent"
-                      rel="noopener noreferrer">Contact Form</a>
+                      rel="noopener noreferrer" id="courseFormLnk" onclick="campaignHighlighter();return false">Contact Form</a>
                     <!-- BUTTON 2 : FORM-2 HIGHLIGHTER END -->
                   </div>
                   <!-- MODAL : MODAL-1 START -->
-                  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel">
+                  <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="registerModalLabel">
                     <div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down">
                       <div class="modal-content">
                         <button type="button"
@@ -245,12 +245,12 @@
           <p class="text-start mb-0">UNIVERSITY PARTNERS</p>
           <p class="text-start fs-2">Learn from <small class="text-success-emphasis">Top University Partners</small>
           </p>
-          <div class="card-style d-flex justify-content-evenly">
+          <div class="card-style d-flex justify-content-evenly align-items-center">
             <!-- SEARCH BAR & SEARCH BUTTON START -->
             <label for="searchColleges"></label>
             <input type="search" name="searchColleges" id="searchColleges" class="form-control search-box"
               aria-describedby="searchColleges" aria-placeholder="Search Colleges">
-            <a href="#" target="_self" class="btn btn-outline-primary search-btn"><svg
+            <a href target="_parent" class="btn btn-outline-primary search-btn" onclick="return false;" rel="noopener noreferrer"><svg
                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
                 viewBox="0 0 16 16">
                 <path

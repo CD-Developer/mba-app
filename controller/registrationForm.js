@@ -41,6 +41,14 @@ document.querySelector(".close-btn")?.addEventListener("onmouseover", (e) => {
   document.querySelector(".close-btn")?.setAttribute("data-bs-theme", "dark");
 });
 
+function campaignHighlighter() {
+  document.querySelector("#formTwo")?.classList.add("form-div-focus");
+
+  setTimeout(() => {
+    document.querySelector("#formTwo")?.classList.remove("form-div-focus");
+  }, 1000);
+}
+
 function getUserDetails() {
   let email = document.querySelector("#counsellingInputEmail")?.value;
   let fullname = document.querySelector("#counsellingInputName")?.value;
