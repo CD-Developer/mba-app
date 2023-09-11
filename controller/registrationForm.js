@@ -19,19 +19,27 @@ document
     if (!isValid) {
       document
         .querySelector("#counsellingInputPhone")
-        .classList.add("invalid-phone");
+        ?.classList.add("invalid-phone");
       document
         .querySelector("#counsellingInputPhone")
-        .classList.remove("valid-phone");
+        ?.classList.remove("valid-phone");
     } else {
       document
         .querySelector("#counsellingInputPhone")
-        .classList.add("valid-phone");
+        ?.classList.add("valid-phone");
       document
         .querySelector("#counsellingInputPhone")
-        .classList.remove("invalid-phone");
+        ?.classList.remove("invalid-phone");
     }
   });
+
+// document
+//   .querySelector(".btn-close:hover")
+//   ?.setAttribute("data-bs-theme", "dark");
+
+document.querySelector(".close-btn")?.addEventListener("onmouseover", (e) => {
+  document.querySelector(".close-btn")?.setAttribute("data-bs-theme", "dark");
+});
 
 function getUserDetails() {
   let email = document.querySelector("#counsellingInputEmail")?.value;
@@ -40,4 +48,23 @@ function getUserDetails() {
   let userCity = document.querySelector("#counsellingInputCity")?.value;
   let isValid = validatePhone(phoneNo);
   console.log({ email, fullname, phoneNo, isValid, userCity });
+}
+
+function getCampaignFormDetails() {
+  let course = document.querySelector("#registrationInputCourse")?.value;
+  let budgetRangeStart = document.querySelector("#minFees")?.value;
+  let budgetRangeEnd = document.querySelector("#maxFees")?.value;
+  let preferredCity = document.querySelector("#registrationInputCity")?.value;
+  let selectedCourses = Array.from(
+    document.querySelector("#registrationInputCourses")?.selectedOptions,
+    (el) => el.value
+  );
+
+  console.log({
+    course,
+    budgetRangeStart,
+    budgetRangeEnd,
+    preferredCity,
+    selectedCourses,
+  });
 }
