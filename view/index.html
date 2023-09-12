@@ -193,14 +193,7 @@
 
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-primary" onclick="getUserDetails()">Continue <svg
-                              width="17" height="14" viewBox="0 0 17 14" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M16.0867 6.9999C16.0867 7.14542 16.0244 7.2844 15.9208 7.38904L10.3176 12.8387C10.0963 13.054 9.73799 13.0535 9.51724 12.8387C9.29592 12.624 9.29592 12.2752 9.51724 12.0604L14.1548 7.55037L1.65271 7.55037C1.34025 7.55037 1.08667 7.30402 1.08667 6.9999C1.08667 6.69577 1.34025 6.44942 1.65271 6.44942L14.1542 6.44942L9.51724 1.93935C9.29592 1.72461 9.29648 1.37579 9.51724 1.16105C9.73856 0.946315 10.0969 0.946315 10.3176 1.16105L15.9208 6.61075C16.0267 6.71376 16.085 6.85547 16.0867 6.9999Z"
-                                fill="#B0BEC5" stroke="#B0BEC5" stroke-width="0.5" stroke-linecap="round"></path>
-                            </svg>
-                          </button>
+                          <button type="button" class="btn btn-primary" onclick="getUserDetails()">Continue</button>
                         </div>
                       </div>
                     </div>
@@ -265,7 +258,7 @@
                   </select>
                 </div>
                 <div class="mb-3 me-3 d-flex justify-content-end">
-                  <button type="button" class="btn btn-primary" onclick="getCampaignFormDetails()">Submit -></button>
+                  <button type="button" class="btn btn-primary" onclick="getCampaignFormDetails()">Submit</button>
                 </div>
 
               </form>
@@ -304,118 +297,141 @@
           <div class="container">
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
               <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-start align-items-center">
-                        <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img" aria-label="placeholder img" class="pe-2">
-                        <h5 class="card-title ps-2">Liverpool Business School</h5>
-                      </div>
-                      <ul class="list-group list-group-flush card-inner">
-                        <li class="list-group-item">Global MBA+ Certification</li>
-                        <li class="list-group-item">18 Months EMI From ₹ 10625/-</li>
-                        <li class="list-group-item">Bachelor's 1 Year Exp</li>
-                      </ul>
-                      <div class="d-flex justify-content-end">
-                        <a href="#formTwo" id="courseFormLnk" onclick="campaignHighlighter()" class="btn btn-outline-success">Get Brochure</a>
-                      </div>
+                <div class="card card-dim">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-start align-items-center">
+                      <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img"
+                        aria-label="placeholder img" class="pe-2">
+                      <h5 class="card-title ps-2" id="cardTitle">Liverpool Business School</h5>
                     </div>
+                    <ul class="list-group list-group-flush card-inner">
+                      <li class="list-group-item">Global MBA+ Certification</li>
+                      <li class="list-group-item">18 Months EMI From ₹ 10625/-</li>
+                      <li class="list-group-item">Bachelor's 1 Year Exp</li>
+                    </ul>
+                    <div class="d-flex justify-content-end">
+                      <a href="#formTwo" id="courseFormLnk" target="_self" onclick="campaignHighlighter()"
+                        class="btn btn-outline-success" rel="noopener noreferrer" aria-labelledby="cardTitle">Get
+                        Brochure</a>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-start align-items-center">
-                        <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img" aria-label="placeholder img" class="pe-2">
-                        <h5 class="card-title ps-2">Deakin Business School</h5>
-                      </div>
-                      <ul class="list-group list-group-flush card-inner">
-                        <li class="list-group-item">Global MBA+ Certification</li>
-                        <li class="list-group-item">24 Months EMI From ₹ 9625/-</li>
-                        <li class="list-group-item">Bachelor's 3 Year Exp</li>
-                      </ul>
-                      <div class="d-flex justify-content-end">
-                        <a href="#formTwo" id="courseFormLnk" onclick="campaignHighlighter()" class="btn btn-outline-success">Get Brochure</a>
-                      </div>
+                <div class="card card-dim">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-start align-items-center">
+                      <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img"
+                        aria-label="placeholder img" class="pe-2">
+                      <h5 class="card-title ps-2" id="cardTitle">Deakin Business School</h5>
                     </div>
+                    <ul class="list-group list-group-flush card-inner">
+                      <li class="list-group-item">Global MBA+ Certification</li>
+                      <li class="list-group-item">24 Months EMI From ₹ 9625/-</li>
+                      <li class="list-group-item">Bachelor's 3 Year Exp</li>
+                    </ul>
+                    <div class="d-flex justify-content-end">
+                      <a href="#formTwo" id="courseFormLnk" target="_self" onclick="campaignHighlighter()"
+                        class="btn btn-outline-success" rel="noopener noreferrer" aria-labelledby="cardTitle">Get
+                        Brochure</a>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-start align-items-center">
-                        <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img" aria-label="placeholder img" class="pe-2">
-                        <h5 class="card-title ps-2">Golden Gate University</h5>
-                      </div>
-                      <ul class="list-group list-group-flush card-inner">
-                        <li class="list-group-item">Global MBA+ Certification</li>
-                        <li class="list-group-item">Scholarship Based</li>
-                        <li class="list-group-item">Any Bachelor's</li>
-                      </ul>
-                      <div class="d-flex justify-content-end">
-                        <a href="#formTwo" id="courseFormLnk" onclick="campaignHighlighter()" class="btn btn-outline-success">Get Brochure</a>
-                      </div>
+                <div class="card card-dim">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-start align-items-center">
+                      <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img"
+                        aria-label="placeholder img" class="pe-2">
+                      <h5 class="card-title ps-2" id="cardTitle">Golden Gate University</h5>
                     </div>
+                    <ul class="list-group list-group-flush card-inner">
+                      <li class="list-group-item">Global MBA+ Certification</li>
+                      <li class="list-group-item">Scholarship Based</li>
+                      <li class="list-group-item">Any Bachelor's</li>
+                    </ul>
+                    <div class="d-flex justify-content-end">
+                      <a href="#formTwo" id="courseFormLnk" target="_self" onclick="campaignHighlighter()"
+                        class="btn btn-outline-success" rel="noopener noreferrer" aria-labelledby="cardTitle">Get
+                        Brochure</a>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-start align-items-center">
-                        <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img" aria-label="placeholder img" class="pe-2">
-                        <h5 class="card-title ps-2">BIMTECH (Birla Institute of Management Technology)</h5>
-                      </div>
-                      <ul class="list-group list-group-flush card-inner">
-                        <li class="list-group-item">PGDM</li>
-                        <li class="list-group-item">24 Months EMI From ₹ 6500/-</li>
-                        <li class="list-group-item">50% Marks in Bachelor's</li>
-                      </ul>
-                      <div class="d-flex justify-content-end">
-                        <a href="#formTwo" id="courseFormLnk" onclick="campaignHighlighter()" class="btn btn-outline-success">Get Brochure</a>
-                      </div>
+                <div class="card card-dim">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-start align-items-center">
+                      <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img"
+                        aria-label="placeholder img" class="pe-2">
+                      <h5 class="card-title ps-2" id="cardTitle">BIMTECH (Birla Institute of Management Technology)</h5>
                     </div>
+                    <ul class="list-group list-group-flush card-inner">
+                      <li class="list-group-item">PGDM</li>
+                      <li class="list-group-item">24 Months EMI From ₹ 6500/-</li>
+                      <li class="list-group-item">50% Marks in Bachelor's</li>
+                    </ul>
+                    <div class="d-flex justify-content-end">
+                      <a href="#formTwo" id="courseFormLnk" target="_self" onclick="campaignHighlighter()"
+                        class="btn btn-outline-success" rel="noopener noreferrer" aria-labelledby="cardTitle">Get
+                        Brochure</a>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-start align-items-center">
-                        <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img" aria-label="placeholder img" class="pe-2">
-                        <h5 class="card-title ps-2">IMT Ghaziabad</h5>
-                      </div>
-                      <ul class="list-group list-group-flush card-inner">
-                        <li class="list-group-item">Advanced General Management</li>
-                        <li class="list-group-item">11 Months EMI From ₹ 3450/-</li>
-                        <li class="list-group-item">50% Marks in Bachelor's</li>
-                      </ul>
-                      <div class="d-flex justify-content-end">
-                        <a href="#formTwo" id="courseFormLnk" onclick="campaignHighlighter()" class="btn btn-outline-success">Get Brochure</a>
-                      </div>
+                <div class="card card-dim">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-start align-items-center">
+                      <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img"
+                        aria-label="placeholder img" class="pe-2">
+                      <h5 class="card-title ps-2" id="cardTitle">IMT Ghaziabad</h5>
                     </div>
+                    <ul class="list-group list-group-flush card-inner">
+                      <li class="list-group-item">Advanced General Management</li>
+                      <li class="list-group-item">11 Months EMI From ₹ 3450/-</li>
+                      <li class="list-group-item">50% Marks in Bachelor's</li>
+                    </ul>
+                    <div class="d-flex justify-content-end">
+                      <a href="#formTwo" id="courseFormLnk" target="_self" onclick="campaignHighlighter()"
+                        class="btn btn-outline-success" rel="noopener noreferrer" aria-labelledby="cardTitle">Get
+                        Brochure</a>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-start align-items-center">
-                        <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img" aria-label="placeholder img" class="pe-2">
-                        <h5 class="card-title ps-2">OP Jindal Global University</h5>
-                      </div>
-                      <ul class="list-group list-group-flush card-inner">
-                        <li class="list-group-item">Global MBA+ Certification</li>
-                        <li class="list-group-item">12 Months EMI From ₹ 5000/- per month</li>
-                        <li class="list-group-item">Bachelor's with 50% Marks</li>
-                      </ul>
-                      <div class="d-flex justify-content-end">
-                        <a href="#formTwo" id="courseFormLnk" onclick="campaignHighlighter()" class="btn btn-outline-success">Get Brochure</a>
-                      </div>
+                <div class="card card-dim">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-start align-items-center">
+                      <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img"
+                        aria-label="placeholder img" class="pe-2">
+                      <h5 class="card-title ps-2" id="cardTitle">OP Jindal Global University</h5>
                     </div>
+                    <ul class="list-group list-group-flush card-inner">
+                      <li class="list-group-item">Global MBA+ Certification</li>
+                      <li class="list-group-item">12 Months EMI From ₹ 5000/- per month</li>
+                      <li class="list-group-item">Bachelor's with 50% Marks</li>
+                    </ul>
+                    <div class="d-flex justify-content-end">
+                      <a href="#formTwo" id="courseFormLnk" target="_self" onclick="campaignHighlighter()"
+                        class="btn btn-outline-success" rel="noopener noreferrer" aria-labelledby="cardTitle">Get
+                        Brochure</a>
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center pt-2">
+              <a href="#"
+                class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                onclick="return false" target="_self" rel="noopener noreferrer" aria-label="Show More">Show More</a>
             </div>
           </div>
         </div>
