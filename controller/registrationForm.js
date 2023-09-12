@@ -42,10 +42,14 @@ document.querySelector(".close-btn")?.addEventListener("onmouseover", (e) => {
 });
 
 function campaignHighlighter() {
-  document.querySelector("#formTwo")?.classList.add("form-div-focus");
+  const form2Element = document.querySelector("#formTwo");
+  form2Element?.classList.add("form-div-focus");
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    form2Element?.scrollIntoView({ behavior:"smooth" });
+  }
 
   setTimeout(() => {
-    document.querySelector("#formTwo")?.classList.remove("form-div-focus");
+    form2Element?.classList.remove("form-div-focus");
   }, 1000);
 }
 
