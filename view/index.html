@@ -248,14 +248,35 @@
                   </datalist>
                 </div>
                 <div class="mb-3">
-                  <label for="registrationInputCourses" class="form-label">Specialization Field</label>
-                  <select class="form-control" name="registrationInputCourses" id="registrationInputCourses" multiple
-                    aria-multiline="true" aria-placeholder="enter-preferred-courses">
-                    <option value="Finance - MBA">Finance - MBA</option>
-                    <option value="IT - MBA">IT - MBA</option>
-                    <option value="HR - PGDM">HR - PGDM</option>
-                    <option value="Energy - MBA">Energy - MBA</option>
-                  </select>
+                  <fieldset id="registrationInputCourses">
+                    <legend class="form-label">Specialization Field</legend>
+                    <ul id="courses" class="list-group">
+                      <li class="list-group-item">
+                        <input 
+                        type="checkbox" id="mbaFinance" name="specializedCourse" class="form-check-input" 
+                        value="MBA (Finance)" aria-describedby="mbaFinance" aria-label="MBA (Finance)">
+                        <label class="form-check-label" for="mbaFinance">MBA (Finance)</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input 
+                        type="checkbox" id="mbaIt" name="specializedCourse" class="form-check-input" 
+                        value="MBA (IT)" aria-describedby="mbaFinance" aria-label="MBA (IT)">
+                        <label class="form-check-label" for="mbaIt">MBA (IT)</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input 
+                        type="checkbox" id="pgdmHR" name="specializedCourse" class="form-check-input" 
+                        value="PGDM (HR)" aria-describedby="pgdmHR" aria-label="PGDM (HR)">
+                        <label class="form-check-label" for="pgdmHR">PGDM (HR)</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input 
+                        type="checkbox" id="mbaEnergy" name="specializedCourse" class="form-check-input" 
+                        value="MBA (Energy)" aria-describedby="mbaEnergy" aria-label="MBA (Energy)">
+                        <label class="form-check-label" for="mbaEnergy">MBA (Energy)</label>
+                      </li>
+                    </ul>
+                  </fieldset>
                 </div>
                 <div class="mb-3 me-3 d-flex justify-content-end">
                   <button type="button" class="btn btn-primary" onclick="getCampaignFormDetails()">Submit</button>

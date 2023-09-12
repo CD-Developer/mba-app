@@ -64,9 +64,9 @@ function getCampaignFormDetails() {
   let budgetRangeEnd = document.querySelector("#maxFees")?.value;
   let preferredCity = document.querySelector("#registrationInputCity")?.value;
   let selectedCourses = Array.from(
-    document.querySelector("#registrationInputCourses")?.selectedOptions,
-    (el) => el.value
-  );
+    document.getElementsByName("specializedCourse"),
+    (el) => (el.checked ? el.value : null)
+  ).filter((value) => value !== null);
 
   console.log({
     course,
