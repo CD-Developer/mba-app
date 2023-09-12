@@ -11,6 +11,15 @@ function validatePhone(contactNo) {
   return phoneNumberPattern.test(contactNo);
 }
 
+/**
+ *
+ * @param {HTMLElement} element Element on which Alert will be shown
+ * @param {string} type Denotes type of alert to be displayed - Success, Warning, Error, CRITICAL etc
+ * @param {string} colorClass Bootstrap color class for coloring the alert
+ * @param {string} message Message to be displayed on Alert
+ */
+function displayAlert(element, type, colorClass, message) {}
+
 document
   .querySelector("#counsellingInputPhone")
   ?.addEventListener("input", (e) => {
@@ -44,8 +53,12 @@ document.querySelector(".close-btn")?.addEventListener("onmouseover", (e) => {
 function campaignHighlighter() {
   const form2Element = document.querySelector("#formTwo");
   form2Element?.classList.add("form-div-focus");
-  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    form2Element?.scrollIntoView({ behavior:"smooth" });
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    form2Element?.scrollIntoView({ behavior: "smooth" });
   }
 
   setTimeout(() => {
@@ -60,6 +73,31 @@ function getUserDetails() {
   let userCity = document.querySelector("#counsellingInputCity")?.value;
   let isValid = validatePhone(phoneNo);
   console.log({ email, fullname, phoneNo, isValid, userCity });
+  if (isValid) {
+    // Close Modal and show an 'alert(success)' to user
+    const alertElement = document.querySelector("#registerAlert");
+    const bootstrapModal = bootstrap.Modal.getInstance(
+      document.querySelector("#registerModal")
+    );
+    console.log(bootstrapModal);
+    bootstrapModal.hide();
+    displayAlert(
+      alertElement,
+      "success",
+      "alert-success",
+      "Successfully registered!"
+    );
+  } else {
+    // Modal border(red) and an 'alert(error)' in modal to user
+    const registrationError = document.querySelector("#registrationError");
+    document.querySelector("#registerContent")?.classList.add("error");
+    displayAlert(
+      registrationError,
+      "warning",
+      "alert-warning",
+      "Incorrect mobile number entered!"
+    );
+  }
 }
 
 function getCampaignFormDetails() {
