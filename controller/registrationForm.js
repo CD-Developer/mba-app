@@ -15,10 +15,17 @@ function validatePhone(contactNo) {
  *
  * @param {HTMLElement} element Element on which Alert will be shown
  * @param {string} type Denotes type of alert to be displayed - Success, Warning, Error, CRITICAL etc
- * @param {string} colorClass Bootstrap color class for coloring the alert
  * @param {string} message Message to be displayed on Alert
  */
-function displayAlert(element, type, colorClass, message) {}
+function displayAlert(element, type, message) {
+  element.classList.add("pt-4");
+  element.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `  <div>${message}</div>`,
+    '  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('');
+}
 
 document
   .querySelector("#counsellingInputPhone")
@@ -84,7 +91,6 @@ function getUserDetails() {
     displayAlert(
       alertElement,
       "success",
-      "alert-success",
       "Successfully registered!"
     );
   } else {
@@ -94,7 +100,6 @@ function getUserDetails() {
     displayAlert(
       registrationError,
       "warning",
-      "alert-warning",
       "Incorrect mobile number entered!"
     );
   }
