@@ -275,32 +275,83 @@
                   </datalist>
                 </div>
                 <div class="mb-3">
+                  <label for="registrationInputCourses" class="form-label">Specialization Field</label>
+                  <div class="dropdown">
+                    <select multiple multiselect-search="true" multiselect-max-items="4"
+                      class="dropdown-toggle form-control" name="registrationInputCourses" id="registrationInputCourses"
+                      aria-multiline="true" aria-placeholder="enter-preferred-courses">
+                      <option key="1" value="MBA (Finance)">MBA (Finance)</option>
+                      <option key="2" value="MBA (IT)">MBA (IT)</option>
+                      <option key="3" value="PGDM (HR)">PGDM (HR)</option>
+                      <option key="4" value="MBA (Energy)">MBA (Energy)</option>
+                      <option key="5" value="MBA (Operations)">MBA (Operations)</option>
+                      <option key="6" value="MBA (Marketing)">MBA (Marketing)</option>
+                      <option key="7" value="MBA (Entreprenuership)">MBA (Entreprenuership)</option>
+                      <option key="8" value="MBA (Accounting)">MBA (Accounting)</option>
+                      <option key="9" value="PGDM (Operations)">PGDM (Operations)</option>
+                      <option key="10" value="MBA (Supply Chain Management)">MBA (Supply Chain Management)</option>
+                    </select>
+                  </div>
+                </div>
+                <noscript>
+                  <div class="mb-3">
                   <fieldset id="registrationInputCourses">
                     <legend class="form-label">Specialization Field</legend>
                     <ul id="courses" class="list-group">
                       <li class="list-group-item">
-                        <input type="checkbox" id="mbaFinance" name="specializedCourse" class="form-check-input"
+                        <input key="1" type="checkbox" id="mbaFinance" name="specializedCourse" class="form-check-input"
                           value="MBA (Finance)" aria-describedby="mbaFinance" aria-label="MBA (Finance)">
                         <label class="form-check-label" for="mbaFinance">MBA (Finance)</label>
                       </li>
                       <li class="list-group-item">
-                        <input type="checkbox" id="mbaIt" name="specializedCourse" class="form-check-input"
+                        <input key="2" type="checkbox" id="mbaIt" name="specializedCourse" class="form-check-input"
                           value="MBA (IT)" aria-describedby="mbaFinance" aria-label="MBA (IT)">
                         <label class="form-check-label" for="mbaIt">MBA (IT)</label>
                       </li>
                       <li class="list-group-item">
-                        <input type="checkbox" id="pgdmHR" name="specializedCourse" class="form-check-input"
+                        <input key="3" type="checkbox" id="pgdmHR" name="specializedCourse" class="form-check-input"
                           value="PGDM (HR)" aria-describedby="pgdmHR" aria-label="PGDM (HR)">
                         <label class="form-check-label" for="pgdmHR">PGDM (HR)</label>
                       </li>
                       <li class="list-group-item">
-                        <input type="checkbox" id="mbaEnergy" name="specializedCourse" class="form-check-input"
+                        <input key="4" type="checkbox" id="mbaEnergy" name="specializedCourse" class="form-check-input"
                           value="MBA (Energy)" aria-describedby="mbaEnergy" aria-label="MBA (Energy)">
                         <label class="form-check-label" for="mbaEnergy">MBA (Energy)</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input key="5" type="checkbox" id="mbaOperations" name="specializedCourse" class="form-check-input"
+                          value="MBA (Operations)" aria-describedby="mbaOperations" aria-label="MBA (Operations)">
+                        <label class="form-check-label" for="mbaOperations">MBA (Operations)</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input key="6" type="checkbox" id="mbaMarketing" name="specializedCourse" class="form-check-input"
+                          value="MBA (Marketing)" aria-describedby="mbaMarketing" aria-label="MBA (Marketing)">
+                        <label class="form-check-label" for="mbaMarketing">MBA (Marketing)</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input key="7" type="checkbox" id="mbaEntreprenuership" name="specializedCourse" class="form-check-input"
+                          value="MBA (Entreprenuership)" aria-describedby="mbaEntreprenuership" aria-label="MBA (Entreprenuership)">
+                        <label class="form-check-label" for="mbaEntreprenuership">MBA (Entreprenuership)</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input key="8" type="checkbox" id="mbaAccounting" name="specializedCourse" class="form-check-input"
+                          value="MBA (Accounting)" aria-describedby="mbaAccounting" aria-label="MBA (Accounting)">
+                        <label class="form-check-label" for="mbaAccounting">MBA (Accounting)</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input key="9" type="checkbox" id="pgdmOperations" name="specializedCourse" class="form-check-input"
+                          value="PGDM (Operations)" aria-describedby="pgdmOperations" aria-label="PGDM (Operations)">
+                        <label class="form-check-label" for="pgdmOperations">PGDM (Operations)</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input key="10" type="checkbox" id="mbaScm" name="specializedCourse" class="form-check-input"
+                          value="MBA (Supply Chain Management)" aria-describedby="mbaScm" aria-label="MBA (Supply Chain Management)">
+                        <label class="form-check-label" for="mbaScm">MBA (Supply Chain Management)</label>
                       </li>
                     </ul>
                   </fieldset>
                 </div>
+                </noscript>
                 <div class="mb-3 me-3 d-flex justify-content-end">
                   <button type="button" class="btn btn-form" onclick="getCampaignFormDetails()">Submit</button>
                 </div>
