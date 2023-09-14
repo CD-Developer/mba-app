@@ -1,0 +1,9 @@
+.close-btn:hover {
+  background-color: red;
+}
+.valid-phone {
+  border: 2px solid green;
+}
+.invalid-phone {
+  border: 2px solid red;
+}

@@ -1,0 +1,16 @@
+.navbar-color {
+  background-color: #f07839;
+}
+
+.helper-color {
+  background-color: inherit;
+  border: 1px solid #39599b;
+}
+
+.helper-color:hover {
+  background-color: #e55a11;
+}
+
+.helper-color:focus {
+  background-color: #e55a11;
+}

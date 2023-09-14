@@ -3,11 +3,9 @@
   border-radius: 25px;
   min-height: 75px;
 }
-
 .col-padder {
   padding: 50px;
 }
-
 @media (max-width: 1024px) {
   .col-padder {
     padding: 10px;
