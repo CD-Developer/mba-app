@@ -23,16 +23,15 @@ function displayAlert(element, type, message) {
     `<div class="alert alert-${type} alert-dismissible" role="alert">`,
     `  <div>${message}</div>`,
     '  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-    '</div>'
-  ].join('');
+    "</div>",
+  ].join("");
 }
 
 document
   .querySelector("#counsellingInputPhone")
   ?.addEventListener("input", (e) => {
     let phoneNo = document.querySelector("#counsellingInputPhone")?.value;
-    let isValid = validatePhone(phoneNo);
-    if (!isValid) {
+    if (!validatePhone(phoneNo)) {
       document
         .querySelector("#counsellingInputPhone")
         ?.classList.add("invalid-phone");
@@ -43,6 +42,12 @@ document
       document
         .querySelector("#counsellingInputPhone")
         ?.classList.add("valid-phone");
+      // Remove the warning/error alert in modal; if present
+      const registrationError = document.querySelector("#registrationError");
+      if (registrationError && registrationError && validatePhone(phoneNo)) {
+        registrationError.innerHTML = "";
+        registrationError.classList.remove("pt-4");
+      }
       document
         .querySelector("#counsellingInputPhone")
         ?.classList.remove("invalid-phone");
@@ -80,22 +85,23 @@ function getUserDetails() {
   let userCity = document.querySelector("#counsellingInputCity")?.value;
   let isValid = validatePhone(phoneNo);
   console.log({ email, fullname, phoneNo, isValid, userCity });
+  const registrationError = document.querySelector("#registrationError");
   if (isValid) {
     // Close Modal and show an 'alert(success)' to user
     const alertElement = document.querySelector("#registerAlert");
     const bootstrapModal = bootstrap.Modal.getInstance(
       document.querySelector("#registerModal")
     );
-    console.log(bootstrapModal);
+    // Clear the form inside Modal after successful validation.
+    document?.querySelector("#counsellingForm").reset();
     bootstrapModal.hide();
-    displayAlert(
-      alertElement,
-      "success",
-      "Successfully registered!"
-    );
+    // Remove the CSS class for styling validated input at Phone No. input box
+    document
+      ?.querySelector("#counsellingInputPhone")
+      .classList.remove("valid-phone");
+    displayAlert(alertElement, "success", "Successfully registered!");
   } else {
     // Modal border(red) and an 'alert(error)' in modal to user
-    const registrationError = document.querySelector("#registrationError");
     document.querySelector("#registerContent")?.classList.add("error");
     displayAlert(
       registrationError,
