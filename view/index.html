@@ -34,6 +34,10 @@
   <noscript>
     <link rel="stylesheet" href="CSS/hero-style.css" />
   </noscript>
+  <link rel="preload" href="CSS/form-style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="CSS/form-style.css" />
+  </noscript>
 </head>
 
 <body>
@@ -298,7 +302,7 @@
                   </fieldset>
                 </div>
                 <div class="mb-3 me-3 d-flex justify-content-end">
-                  <button type="button" class="btn btn-primary" onclick="getCampaignFormDetails()">Submit</button>
+                  <button type="button" class="btn btn-form" onclick="getCampaignFormDetails()">Submit</button>
                 </div>
 
               </form>

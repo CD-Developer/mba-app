@@ -1,0 +1,10 @@
+.btn-form {
+  border: 1px solid #39599b;
+  color: #39599b;
+}
+
+.btn-form:hover {
+  border: 1px solid #f07839;
+  color: #f07839;
+  background: #DAE0E5;
+}
