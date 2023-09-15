@@ -1,4 +1,13 @@
 "use strict";
+/**
+ *
+ * @returns {boolean} the device where this site is rendered is a mobile/tablet device
+ */
+function isMobile() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
+}
 
 /**
  *
@@ -65,11 +74,7 @@ document.querySelector(".close-btn")?.addEventListener("onmouseover", (e) => {
 function campaignHighlighter() {
   const form2Element = document.querySelector("#formTwo");
   form2Element?.classList.add("form-div-focus");
-  if (
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    )
-  ) {
+  if (isMobile()) {
     form2Element?.scrollIntoView({ behavior: "smooth" });
   }
 
@@ -121,11 +126,18 @@ function getCampaignFormDetails() {
     (el) => (el.checked ? el.value : null)
   ).filter((value) => value !== null);
 
+  let deskSelectedCourses = Array.from(
+    document.querySelector("#registrationInputCourses"),
+    (el) => el["listitemEl"]["optEl"]
+  );
+
   console.log({
     course,
     budgetRangeStart,
     budgetRangeEnd,
     preferredCity,
     selectedCourses,
+    i: deskSelectedCourses[0].listitemEl,
+    j: deskSelectedCourses[1].listitemEl,
   });
 }

@@ -276,9 +276,9 @@
                 </div>
                 <div class="mb-3">
                   <label for="registrationInputCourses" class="form-label">Specialization Field</label>
-                  <div class="dropdown">
+                  <div>
                     <select multiple multiselect-search="true" multiselect-max-items="4"
-                      class="dropdown-toggle form-control" name="registrationInputCourses" id="registrationInputCourses"
+                      class="form-select" name="registrationInputCourses" id="registrationInputCourses"
                       aria-multiline="true" aria-placeholder="enter-preferred-courses">
                       <option key="1" value="MBA (Finance)">MBA (Finance)</option>
                       <option key="2" value="MBA (IT)">MBA (IT)</option>
@@ -583,7 +583,10 @@
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
   <script src="../controller/registrationForm.js"></script>
-  <script defer src="../lib/multiselect-dropdown.js"></script>
+  <script defer>
+    if (screen && screen.width > 991) {
+      document && document.write(`<script defer src="../lib/multiselect-dropdown.js"><\/script>`);
+    }
+  </script>
 </body>
-
 </html>
