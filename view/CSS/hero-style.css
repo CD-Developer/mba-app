@@ -8,3 +8,7 @@
   color: #f07839;
   background: #DAE0E5;
 }
+
+.card-title > h3 > mark {
+  color: #39599b;
+}
