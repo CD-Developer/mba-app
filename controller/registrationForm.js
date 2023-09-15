@@ -117,27 +117,25 @@ function getUserDetails() {
 }
 
 function getCampaignFormDetails() {
-  let course = document.querySelector("#registrationInputCourse")?.value;
   let budgetRangeStart = document.querySelector("#minFees")?.value;
   let budgetRangeEnd = document.querySelector("#maxFees")?.value;
   let preferredCity = document.querySelector("#registrationInputCity")?.value;
-  let selectedCourses = Array.from(
-    document.getElementsByName("specializedCourse"),
-    (el) => (el.checked ? el.value : null)
-  ).filter((value) => value !== null);
+  // let selectedCourses = Array.from(
+  //   document.getElementsByName("specializedCourse"),
+  //   (el) => (el.checked ? el.value : null)
+  // ).filter((value) => value !== null);
 
   let deskSelectedCourses = Array.from(
     document.querySelector("#registrationInputCourses"),
-    (el) => el["listitemEl"]["optEl"]
-  );
+    (option) => (option.selected ? option.value : null)
+  ).filter((course) => course !== null);
 
-  console.log({
-    course,
+  let payload = {
     budgetRangeStart,
     budgetRangeEnd,
     preferredCity,
-    selectedCourses,
-    i: deskSelectedCourses[0].listitemEl,
-    j: deskSelectedCourses[1].listitemEl,
-  });
+    deskSelectedCourses,
+  };
+
+  console.log(payload);
 }
