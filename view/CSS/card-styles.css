@@ -1,0 +1,17 @@
+.product-card {
+  border: 3px solid #39599b;
+}
+
+.product-card:hover {
+  border: 3px solid #e55a11;
+}
+
+.product-button {
+  color: #39599b;
+  border: 1px solid #39599b;
+}
+
+.product-button:hover {
+  color: #e55a11;
+  border: 1px solid #e55a11;
+}
