@@ -9,7 +9,7 @@
   margin: 0 0 0 5px;
   min-height: 60px;
   min-width: 60px;
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
 }
