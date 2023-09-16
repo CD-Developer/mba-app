@@ -51,10 +51,10 @@
 <body>
   <main>
     <!-- NavBar Start -->
-    <nav class="navbar navbar-expand-lg navbar-color" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-color">
       <div class="container-fluid d-flex justify-content-around">
         <!-- LOGO START -->
-        <a class="navbar-brand" href="#">MBA Colleges</a>
+        <a class="brand navbar-brand" href="#">MBA Colleges</a>
         <!-- LOGO END -->
         <!-- CONTACT DIVS START -->
         <div class="d-flex justify-content-end">
@@ -252,7 +252,7 @@
                     <label for="minFees" class="form-label"></label>
                     <div class="input-group">
                       <span class="input-group-text">&#8377;</span>
-                      <input type="number" name="minFees" id="minFees" class="form-control"
+                      <input type="number" min="0" name="minFees" id="minFees" class="form-control"
                         aria-describedby="minFeesHelp" placeholder="Min" aria-placeholder="enter-min-fees">
                     </div>
                   </div>
@@ -260,7 +260,7 @@
                     <label for="maxFees" class="form-label"></label>
                     <div class="input-group">
                       <span class="input-group-text">&#8377;</span>
-                      <input type="number" name="maxFees" id="maxFees" class="form-control"
+                      <input type="number" min="0" name="maxFees" id="maxFees" class="form-control"
                         aria-describedby="maxFeesHelp" placeholder="Max" aria-placeholder="enter-max-fees">
                     </div>
                   </div>
@@ -410,7 +410,7 @@
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
               <div class="col">
                 <div class="card card-dim product-card">
-                  <div class="card-body">
+                  <div class="card-body d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-start align-items-center">
                       <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img"
                         aria-label="placeholder img" class="pe-2" width="75" height="75">
@@ -421,7 +421,7 @@
                       <li class="list-group-item">18 Months EMI From ₹ 10625/-</li>
                       <li class="list-group-item">Bachelor's 1 Year Exp</li>
                     </ul>
-                    <div class="d-flex justify-content-end">
+                    <div class="d-flex justify-content-end align-items-center">
                       <a href="#formTwo" id="courseFormLnk" target="_self" onclick="campaignHighlighter()"
                         class="btn product-button" rel="noopener noreferrer" aria-labelledby="cardTitle">Get
                         Brochure</a>
@@ -432,7 +432,7 @@
 
               <div class="col">
                 <div class="card card-dim product-card">
-                  <div class="card-body">
+                  <div class="card-body d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-start align-items-center">
                       <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img"
                         aria-label="placeholder img" class="pe-2" width="75" height="75">
@@ -443,7 +443,7 @@
                       <li class="list-group-item">24 Months EMI From ₹ 9625/-</li>
                       <li class="list-group-item">Bachelor's 3 Year Exp</li>
                     </ul>
-                    <div class="d-flex justify-content-end">
+                    <div class="d-flex justify-content-end align-items-center">
                       <a href="#formTwo" id="courseFormLnk" target="_self" onclick="campaignHighlighter()"
                         class="btn product-button" rel="noopener noreferrer" aria-labelledby="cardTitle">Get
                         Brochure</a>
@@ -454,7 +454,7 @@
 
               <div class="col">
                 <div class="card card-dim product-card">
-                  <div class="card-body">
+                  <div class="card-body d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-start align-items-center">
                       <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img"
                         aria-label="placeholder img" class="pe-2" width="75" height="75">
@@ -465,7 +465,7 @@
                       <li class="list-group-item">Scholarship Based</li>
                       <li class="list-group-item">Any Bachelor's</li>
                     </ul>
-                    <div class="d-flex justify-content-end">
+                    <div class="d-flex justify-content-end align-items-center">
                       <a href="#formTwo" id="courseFormLnk" target="_self" onclick="campaignHighlighter()"
                         class="btn product-button" rel="noopener noreferrer" aria-labelledby="cardTitle">Get
                         Brochure</a>
@@ -476,7 +476,7 @@
 
               <div class="col">
                 <div class="card card-dim product-card">
-                  <div class="card-body">
+                  <div class="card-body d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-start align-items-center">
                       <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img"
                         aria-label="placeholder img" class="pe-2" width="75" height="75">
@@ -487,7 +487,7 @@
                       <li class="list-group-item">24 Months EMI From ₹ 6500/-</li>
                       <li class="list-group-item">50% Marks in Bachelor's</li>
                     </ul>
-                    <div class="d-flex justify-content-end">
+                    <div class="d-flex justify-content-end align-items-center">
                       <a href="#formTwo" id="courseFormLnk" target="_self" onclick="campaignHighlighter()"
                         class="btn product-button" rel="noopener noreferrer" aria-labelledby="cardTitle">Get
                         Brochure</a>
@@ -498,7 +498,7 @@
 
               <div class="col">
                 <div class="card card-dim product-card">
-                  <div class="card-body">
+                  <div class="card-body d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-start align-items-center">
                       <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img"
                         aria-label="placeholder img" class="pe-2" width="75" height="75">
@@ -509,7 +509,7 @@
                       <li class="list-group-item">11 Months EMI From ₹ 3450/-</li>
                       <li class="list-group-item">50% Marks in Bachelor's</li>
                     </ul>
-                    <div class="d-flex justify-content-end">
+                    <div class="d-flex justify-content-end align-items-center">
                       <a href="#formTwo" id="courseFormLnk" target="_self" onclick="campaignHighlighter()"
                         class="btn product-button" rel="noopener noreferrer" aria-labelledby="cardTitle">Get
                         Brochure</a>
@@ -520,7 +520,7 @@
 
               <div class="col">
                 <div class="card card-dim product-card">
-                  <div class="card-body">
+                  <div class="card-body d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-start align-items-center">
                       <img src="https://placehold.co/75/orange/white?text=CollegeImg" alt="placeholder img"
                         aria-label="placeholder img" class="pe-2" width="75" height="75">
@@ -531,7 +531,7 @@
                       <li class="list-group-item">12 Months EMI From ₹ 5000/- per month</li>
                       <li class="list-group-item">Bachelor's with 50% Marks</li>
                     </ul>
-                    <div class="d-flex justify-content-end">
+                    <div class="d-flex justify-content-end align-items-center">
                       <a href="#formTwo" id="courseFormLnk" target="_self" onclick="campaignHighlighter()"
                         class="btn product-button" rel="noopener noreferrer" aria-labelledby="cardTitle">Get
                         Brochure</a>

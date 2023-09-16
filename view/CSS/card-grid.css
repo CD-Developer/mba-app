@@ -3,5 +3,12 @@
 }
 
 .card-dim {
-  min-height: 343px;
+  height: 450px !important;
+}
+
+@media (min-width: 768px) {
+  .card-dim {
+    min-height: 375px;
+    max-height: 425px;
+  }
 }

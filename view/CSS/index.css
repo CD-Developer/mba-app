@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 a {
   text-decoration: none;
 }
@@ -7,6 +8,10 @@ a {
   font: 400;
   padding: 25px;
 }
+body {
+  font: 1.2rem "Poppins", sans-serif !important;
+}
+
 .hero-div {
   padding: 100px;
 }

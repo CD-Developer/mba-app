@@ -2,6 +2,10 @@
   background-color: #f07839;
 }
 
+.brand {
+  color: #39599b;
+}
+
 .helper-color {
   background-color: inherit;
   border: 1px solid #39599b;
@@ -15,4 +19,3 @@
 .helper-color:focus {
   background-color: #e55a11;
 }
-
