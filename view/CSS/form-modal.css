@@ -7,3 +7,14 @@
 .invalid-phone {
   border: 2px solid red;
 }
+
+.btn-submit {
+  border: 1px solid #39599b;
+  color: #39599b;
+}
+
+.btn-submit:hover {
+  border: 1px solid #f07839;
+  color: #f07839;
+  background: #DAE0E5;
+}
