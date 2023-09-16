@@ -11,6 +11,10 @@ a {
 body {
   font: 1.2rem "Poppins", sans-serif !important;
 }
+.text-highlight {
+  color: #39599b;
+  background: inherit;
+}
 
 .hero-div {
   padding: 100px;

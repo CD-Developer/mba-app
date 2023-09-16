@@ -11,4 +11,6 @@
 
 .card-title > h3 > mark {
   color: #39599b;
+  background: #F8BC9C;
+  font-weight: bold;
 }
