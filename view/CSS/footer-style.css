@@ -1,3 +1,4 @@
 .foot-text {
   color: #39599b;
+  user-select: none;
 }
