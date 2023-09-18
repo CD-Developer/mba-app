@@ -36,6 +36,32 @@ function displayAlert(element, type, message) {
   ].join("");
 }
 
+/**
+ *
+ * @param {HTMLElement} element The Element to be decorated on incorrect input
+ * @param {boolean} isIncorrect Switches CSS style
+ */
+function decorateOnError(element, isIncorrect) {
+  if (element) {
+    if (isIncorrect) {
+      element.classList.add("invalid");
+      element.classList.remove("valid");
+    } else {
+      element.classList.add("valid");
+      element.classList.remove("invalid");
+    }
+  }
+}
+
+const emailEl = document.querySelector("#counsellingInputEmail");
+emailEl.addEventListener("input", (e) => {
+  if (emailEl.validity.typeMismatch) {
+    decorateOnError(emailEl, true);
+  } else {
+    decorateOnError(emailEl, false);
+  }
+});
+
 document
   .querySelector("#counsellingInputPhone")
   ?.addEventListener("input", (e) => {
@@ -43,14 +69,12 @@ document
     if (!validatePhone(phoneNo)) {
       document
         .querySelector("#counsellingInputPhone")
-        ?.classList.add("invalid-phone");
+        ?.classList.add("invalid");
       document
         .querySelector("#counsellingInputPhone")
-        ?.classList.remove("valid-phone");
+        ?.classList.remove("valid");
     } else {
-      document
-        .querySelector("#counsellingInputPhone")
-        ?.classList.add("valid-phone");
+      document.querySelector("#counsellingInputPhone")?.classList.add("valid");
       // Remove the warning/error alert in modal; if present
       const registrationError = document.querySelector("#registrationError");
       if (registrationError && registrationError && validatePhone(phoneNo)) {
@@ -59,7 +83,7 @@ document
       }
       document
         .querySelector("#counsellingInputPhone")
-        ?.classList.remove("invalid-phone");
+        ?.classList.remove("invalid");
     }
   });
 
@@ -88,10 +112,10 @@ function getUserDetails() {
   let fullname = document.querySelector("#counsellingInputName")?.value;
   let phoneNo = document.querySelector("#counsellingInputPhone")?.value;
   let userCity = document.querySelector("#counsellingInputCity")?.value;
-  let isValid = validatePhone(phoneNo);
-  console.log({ email, fullname, phoneNo, isValid, userCity });
+  let phoneIsValid = validatePhone(phoneNo);
+  let emailIsValid = !document.querySelector("#counsellingInputEmail").validity.typeMismatch;
   const registrationError = document.querySelector("#registrationError");
-  if (isValid) {
+  if (phoneIsValid && emailIsValid) {
     // Close Modal and show an 'alert(success)' to user
     const alertElement = document.querySelector("#registerAlert");
     const bootstrapModal = bootstrap.Modal.getInstance(
@@ -103,16 +127,29 @@ function getUserDetails() {
     // Remove the CSS class for styling validated input at Phone No. input box
     document
       ?.querySelector("#counsellingInputPhone")
-      .classList.remove("valid-phone");
+      .classList.remove("valid");
     displayAlert(alertElement, "success", "Successfully registered!");
   } else {
-    // Modal border(red) and an 'alert(error)' in modal to user
-    document.querySelector("#registerContent")?.classList.add("error");
     displayAlert(
       registrationError,
       "warning",
       "Incorrect mobile number entered!"
     );
+  }
+  if (!emailIsValid) {
+    displayAlert(
+      registrationError,
+      "danger",
+      "Incorrect email address entered!"
+    );
+  } else {
+    registrationError.setAttribute("display","none");
+  }
+
+  if(emailIsValid && phoneIsValid) {
+    console.log({ email, fullname, phoneNo, userCity });
+  } else {
+    console.error({ phoneIsValid, emailIsValid });
   }
 }
 
