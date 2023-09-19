@@ -100,6 +100,8 @@ function campaignHighlighter() {
   form2Element?.classList.add("form-div-focus");
   if (isMobile()) {
     form2Element?.scrollIntoView({ behavior: "smooth" });
+  } else {
+    document?.querySelector("#hero").scrollIntoView({ behavior: "smooth" });
   }
 
   setTimeout(() => {
