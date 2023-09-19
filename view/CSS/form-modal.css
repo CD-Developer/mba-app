@@ -18,3 +18,8 @@
   color: #f07839;
   background: #DAE0E5;
 }
+
+.modal-border {
+  border: 2px solid #39599b;
+  border-radius: 0.6rem;
+}
