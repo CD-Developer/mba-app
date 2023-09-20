@@ -59,6 +59,7 @@ emailEl.addEventListener("input", (e) => {
     decorateOnError(emailEl, true);
   } else {
     decorateOnError(emailEl, false);
+    document.querySelector("#registrationError").innerHTML = "";
   }
 });
 
@@ -115,7 +116,8 @@ function getUserDetails() {
   let phoneNo = document.querySelector("#counsellingInputPhone")?.value;
   let userCity = document.querySelector("#counsellingInputCity")?.value;
   let phoneIsValid = validatePhone(phoneNo);
-  let emailIsValid = !document.querySelector("#counsellingInputEmail").validity.typeMismatch;
+  let emailIsValid = !document.querySelector("#counsellingInputEmail").validity
+    .typeMismatch;
   const registrationError = document.querySelector("#registrationError");
   if (phoneIsValid && emailIsValid) {
     // Close Modal and show an 'alert(success)' to user
@@ -127,9 +129,7 @@ function getUserDetails() {
     document?.querySelector("#counsellingForm").reset();
     bootstrapModal.hide();
     // Remove the CSS class for styling validated input at Phone No. input box
-    document
-      ?.querySelector("#counsellingInputPhone")
-      .classList.remove("valid");
+    document?.querySelector("#counsellingInputPhone").classList.remove("valid");
     displayAlert(alertElement, "success", "Successfully registered!");
   } else {
     displayAlert(
@@ -145,10 +145,10 @@ function getUserDetails() {
       "Incorrect email address entered!"
     );
   } else {
-    registrationError.setAttribute("display","none");
+    registrationError.setAttribute("display", "none");
   }
 
-  if(emailIsValid && phoneIsValid) {
+  if (emailIsValid && phoneIsValid) {
     console.log({ email, fullname, phoneNo, userCity });
   } else {
     console.error({ phoneIsValid, emailIsValid });
