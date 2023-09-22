@@ -175,7 +175,7 @@
                           class="btn-close d-flex flex-column-reverse align-self-end me-2 mt-2 close-btn"
                           data-bs-dismiss="modal" aria-label="Close"></button>
                         <div class="modal-body">
-                          <form id="counsellingForm" name="formInModal">
+                          <form id="counsellingForm" name="popup">
                             <div id="registrationError"></div>
                             <div class="mb-3">
                               <label for="counsellingInputName" class="form-label"></label>
@@ -245,11 +245,10 @@
                                 </datalist>
                               </div>
                             </div>
+                            <div class="modal-footer">
+                              <button type="submit" name="formInModalButton" class="btn btn-submit" onclick="getLeadDetails(this)">Continue</button>
+                            </div>
                           </form>
-
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" name="formInModalButton" class="btn btn-submit" onclick="getLeadDetails(this)">Continue</button>
                         </div>
                       </div>
                     </div>
@@ -261,7 +260,7 @@
             <div class="col-lg-4 form-div" id="formTwo">
               <h3 class="text-center">MBA Coaching</h3>
               <div id="mainForm">
-                <form id="counsellingForm" name="form1">
+                <form id="counsellingForm" name="home">
                   <div class="mb-3">
                     <label for="counsellingInputName" class="form-label"></label>
                     <div class="input-group">
@@ -331,7 +330,7 @@
                     </div>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" name="form1Button" class="btn btn-submit" onclick="getLeadDetails(this)">Continue</button>
+                    <button type="submit" name="form1Button" class="btn btn-submit" onclick="getLeadDetails(this)">Continue</button>
                   </div>
                 </form>
                 <form id="registrationForm" style="display: none;">

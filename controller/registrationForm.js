@@ -20,16 +20,6 @@ function validatePhone(contactNo) {
   return phoneNumberPattern.test(contactNo);
 }
 
-
-// /**
-//  *
-//  * @param {HTMLInputElement} emailEl
-//  * @returns
-//  */
-// function validateEmail(emailEl) {
-//   return !emailEl.type.typeMismatch;
-// }
-
 /**
  *
  * @param {HTMLElement} element Element on which Alert will be shown
@@ -63,6 +53,10 @@ function decorateOnError(element, isIncorrect) {
   }
 }
 
+document.querySelectorAll("#counsellingForm").forEach((form) => {
+  form.addEventListener("submit", (e) => e.preventDefault());
+});
+
 const emailEls =
   document && document.querySelectorAll("#counsellingInputEmail");
 emailEls.forEach((emailEl) =>
@@ -88,10 +82,10 @@ phoneEls.forEach((phoneEl) =>
       // Remove the warning/error alert in modal; if present
       const registrationError =
         document && document.querySelector("#registrationError");
-        if (registrationError && registrationError && validatePhone(phoneNo)) {
-          registrationError.innerHTML = "";
-          registrationError.classList.remove("pt-4");
-        }
+      if (registrationError && registrationError && validatePhone(phoneNo)) {
+        registrationError.innerHTML = "";
+        registrationError.classList.remove("pt-4");
+      }
     }
   })
 );
@@ -201,29 +195,33 @@ function getLeadDetails(button) {
   const registrationError = document.querySelector("#registrationError");
   const alertElement = document.querySelector("#registerAlert");
   const loadDiv = isPopupForm ? registrationError : alertElement;
-  const homeForm = document && document.querySelector("form[name='form1']");
+  const homeForm = document && document.querySelector("form[name='home']");
   const secondForm = document && document.querySelector("#registrationForm");
   if (phoneIsValid && emailIsValid) {
-
-    if(isPopupForm) {
+    if (isPopupForm) {
       // Close Modal and show an 'alert(success)' to user
       const bootstrapModal = bootstrap.Modal.getInstance(
         document.querySelector("#registerModal")
       );
       // Clear the form inside Modal after successful validation.
-      document?.querySelector("form[name='formInModal']").reset();
+      document?.querySelector("form[name='popup']").reset();
       bootstrapModal.hide();
     } else {
+      // Remove required from PhoneNo after submitting it
+      inputEls[2].required = false;
       // Reset the form in Homepage
       homeForm.reset();
     }
+    // Remove required from PhoneNo after submitting
+    inputEls[2].required = false;
     // leadForm -> success -> load secondForm
+    homeForm.removeAttribute("required");
     homeForm.style.display = "none";
     secondForm.style.display = "block";
     displayAlert(alertElement, "success", "Successfully registered!");
   } else {
     displayAlert(loadDiv, "danger", "Incorrect mobile or email entered!");
-  } 
+  }
 
   if (emailIsValid && phoneIsValid) {
     console.log({ email, fullname, phoneNo, userCity });
